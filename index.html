@@ -1,214 +1,580 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>힙플레이스 카페 리서치 및 기술 인프라 저널</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #3b82f6;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.7;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 300;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(59, 130, 246, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포 셔츠룸 | 힙플레이스 카페 | 마포 핫플</title>
+    <meta name="description" content="마포 셔츠룸? 여긴 카페다. 힙스터들의 성지, 자유로운 분위기, 강력한 커피. 마포에서 가장 솔직한 공간. 지금 전화 010-6279-0862. 예약은 없다. 그냥 와.">
+    <meta name="keywords" content="마포 셔츠룸, 마포 카페, 힙플레이스, 마포 핫플, 브루탈리즘 카페, 마포 힙스터, 언더그라운드 카페, 마포 커피">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <link rel="canonical" href="https://sf-t3-1779642675702-148.pages.dev/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="마포 셔츠룸 — 힙플레이스 카페">
+    <meta property="og:description" content="옷 갈아입는 곳 아님. 커피 마시고 생각 갈아입는 곳. 마포 힙스터의 성지.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-148.pages.dev/">
+    <meta property="og:locale" content="ko_KR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="마포 셔츠룸 — 힙플레이스 카페">
+    <meta name="twitter:description" content="옷 갈아입는 곳 아님. 커피 마시고 생각 갈아입는 곳. 마포 힙스터의 성지.">
+
+    <!-- JSON-LD LocalBusiness -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "마포 셔츠룸",
+            "telephone": "010-6279-0862",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "마포",
+                "addressCountry": "KR"
+            },
+            "url": "https://sf-t3-1779642675702-148.pages.dev/",
+            "description": "마포 힙플레이스 카페. 셔츠룸은 페이크, 진짜는 커피와 자유."
+        }
+    </script>
+
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Impact', 'Arial Black', system-ui, -apple-system, sans-serif;
+            line-height: 1.2;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            max-width: none;
+            overflow-x: hidden;
+            letter-spacing: 0.02em;
+        }
+
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: -0.03em;
+        }
+
+        h1 {
+            font-size: clamp(3.5rem, 12vw, 7rem);
+            line-height: 0.9;
+            margin-bottom: 0.2em;
+        }
+
+        h2 {
+            font-size: clamp(2.4rem, 8vw, 4.5rem);
+            border-bottom: 4px solid #ff3b00;
+            display: inline-block;
+            padding-bottom: 4px;
+            margin-bottom: 0.5em;
+        }
+
+        h3 {
+            font-size: clamp(1.6rem, 5vw, 2.8rem);
+            letter-spacing: -0.02em;
+        }
+
+        p, li, a, .text-block {
+            font-family: 'system-ui', -apple-system, sans-serif;
+            font-weight: 400;
+            line-height: 1.4;
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        a:hover {
+            color: #ff3b00;
+            border-bottom-color: #ff3b00;
+        }
+
+        /* UTILITY */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 72px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+        }
+
+        .section-gap {
+            margin-bottom: 120px;
+        }
+
+        .gap-48 {
+            gap: 48px;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .block {
+            display: block;
+        }
+
+        .text-accent {
+            color: #ff3b00;
+        }
+
+        .border-accent {
+            border: 4px solid #ff3b00;
+        }
+
+        .bg-accent {
+            background-color: #ff3b00;
+            color: #000000;
+        }
+
+        .bg-black {
+            background-color: #000000;
+        }
+
+        .skew-left {
+            transform: rotate(-1.5deg);
+        }
+
+        .skew-right {
+            transform: rotate(1.5deg);
+        }
+
+        .no-round {
+            border-radius: 0 !important;
+        }
+
+        /* HEADER */
+        header {
+            padding: 24px 72px;
+            border-bottom: 4px solid #ff3b00;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #000;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 16px 24px;
+            }
+        }
+
+        .logo {
+            font-size: 2rem;
+            letter-spacing: -0.03em;
+            border: none;
+            color: #fff;
+        }
+
+        .logo:hover {
+            color: #ff3b00;
+            border: none;
+        }
+
+        /* NAV */
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 48px;
+            list-style: none;
+        }
+
+        .nav-list li a {
+            font-family: 'Impact', 'Arial Black', system-ui, sans-serif;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            border: none;
+            padding: 4px 0;
+            position: relative;
+        }
+
+        .nav-list li a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 4px;
+            background: #ff3b00;
+            transition: width 0.3s;
+        }
+
+        .nav-list li a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 32px;
+            height: 4px;
+            background: #fff;
+            transition: all 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                gap: 16px;
+                background: #000;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 32px 24px;
+                border-bottom: 4px solid #ff3b00;
+                z-index: 99;
+            }
+
+            .nav-list.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 72px;
+            background: #000;
+            border-bottom: 4px solid #ff3b00;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #ff3b00 0%, transparent 70%);
+            opacity: 0.25;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 48px 24px;
+                min-height: 70vh;
+            }
+        }
+
+        .hero h1 {
+            font-size: clamp(4rem, 14vw, 8rem);
+            max-width: 900px;
+            margin-bottom: 0.2em;
+        }
+
+        .hero .sub {
+            font-size: clamp(1.6rem, 4vw, 2.6rem);
+            display: block;
+            margin-bottom: 0.5em;
+            color: #ff3b00;
+        }
+
+        .hero .cta-phone {
+            display: inline-block;
+            font-size: 2.2rem;
+            background: #ff3b00;
+            color: #000;
+            padding: 8px 32px;
+            border: 4px solid #fff;
+            font-weight: 700;
+            margin-top: 24px;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .hero .cta-phone:hover {
+            background: #fff;
+            color: #000;
+            border-color: #ff3b00;
+        }
+
+        /* ABOUT / INTRO */
+        .intro-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            padding: 72px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .intro-block {
+                grid-template-columns: 1fr;
+                padding: 48px 24px;
+                gap: 32px;
+            }
+        }
+
+        .intro-block .left {
+            border-right: 4px solid #ff3b00;
+            padding-right: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .intro-block .left {
+                border-right: none;
+                padding-right: 0;
+                border-bottom: 4px solid #ff3b00;
+                padding-bottom: 32px;
+            }
+        }
+
+        .intro-block .right {
+            font-size: 1.4rem;
+        }
+
+        /* REVIEWS */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 48px;
+            padding: 72px;
+        }
+
+        @media (max-width: 768px) {
+            .reviews-grid {
+                padding: 48px 24px;
+                gap: 32px;
+            }
+        }
+
+        .review-card {
+            border: 4px solid #ff3b00;
+            padding: 32px 24px;
+            background: #0a0a0a;
+            position: relative;
+            transition: transform 0.2s;
+        }
+
+        .review-card:hover {
+            transform: rotate(0.5deg) scale(1.01);
+        }
+
+        .review-card .stars {
+            color: #ff3b00;
+            font-size: 1.6rem;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
+        }
+
+        .review-card .nick {
+            font-family: 'Impact', sans-serif;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid #fff;
+            display: inline-block;
+            padding-bottom: 2px;
+            margin-bottom: 8px;
+        }
+
+        .review-card .date {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            display: block;
+            margin-bottom: 12px;
+            font-family: system-ui;
+        }
+
+        .review-card .text {
+            font-family: system-ui;
+            line-height: 1.5;
+        }
+
+        /* LOCATION / CONTACT */
+        .location-block {
+            padding: 72px;
+            background: #0a0a0a;
+            border-top: 4px solid #ff3b00;
+            border-bottom: 4px solid #ff3b00;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .location-block {
+                padding: 48px 24px;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .location-block .info h2 {
+            border-bottom: none;
+            margin-bottom: 8px;
+        }
+
+        .location-block .info p {
+            font-size: 1.3rem;
+        }
+
+        .location-block .phone-big {
+            font-size: 2.8rem;
+            background: #ff3b00;
+            color: #000;
+            padding: 8px 40px;
+            border: 4px solid #fff;
+            font-weight: 700;
+            display: inline-block;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .location-block .phone-big:hover {
+            background: #fff;
+            color: #000;
+            border-color: #ff3b00;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 48px 72px 32px;
+            border-top: 4px solid #ff3b00;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 32px 24px;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        footer .copy {
+            font-family: system-ui;
+            font-size: 0.95rem;
+            opacity: 0.7;
+        }
+
+        footer .links a {
+            margin: 0 16px;
+            font-family: 'Impact', sans-serif;
+            text-transform: uppercase;
+            border: none;
+        }
+
+        footer .links a:hover {
+            color: #ff3b00;
+        }
+
+        /* EXTRA TEXTURE */
+        .texture-line {
+            width: 100%;
+            height: 4px;
+            background: repeating-linear-gradient(45deg, #ff3b00, #ff3b00 8px, transparent 8px, transparent 16px);
+        }
+
+        .brutal-border {
+            border: 4px solid #fff;
+            outline: 4px solid #ff3b00;
+            outline-offset: -8px;
+        }
+
+        /* RESPONSIVE HAMBURGER TOGGLE */
+        @media (max-width: 768px) {
+            .nav-list.active {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
+
     <header>
-      <a href="/" class="logo">T3.SWISS</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
+        <a href="/" class="logo">마포셔츠룸◼</a>
+        <nav>
+            <button class="hamburger" id="hamburger" aria-label="메뉴">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-list" id="navList">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">리뷰</a></li>
+                <li><a href="#">위치</a></li>
+                <li><a href="tel:010-6279-0862">전화</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-      <div class="meta-tag">SWISS ACCENTED GRID SYSTEM</div>
-      <h1>힙플레이스 카페 리서치 및 기술 인프라 저널</h1>
-      <div class="content">
-        환영합니다. 본 블로그 저널은 현대적이고 세련된 <strong>힙플레이스 카페</strong> 분야의 실용 정보와 심도 있는 기술 에세이를 기록하는 전문 아카이브 공간입니다. 아래의 엄선된 아티클 리스트를 통해 다양한 인사이트를 확인하시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>힙플레이스 카페: 라이프스타일: 일상 최적화 가이드</h3>
-          <p>바쁘게 흘러가는 도심 라이프 속에서 나만의 시간적 여유와 쾌적한 데일리 습관을 디자인하는 것은 삶의 질을 극대화하는 가장 첫 번째 과제입니다. 미니멀한 마인드와 루틴 설계는 큰 힘...</p>
-        </a>
-      
+        <!-- HERO -->
+        <section class="hero">
+            <span class="sub">— 마포 힙플레이스 —</span>
+            <h1>셔츠룸?<br>니가 알던 그게 아냐.</h1>
+            <p style="font-size:1.6rem; max-width:700px; border-left:4px solid #ff3b00; padding-left:24px;">
+                여긴 옷 갈아입는 곳이 아니다.<br>생각과 감각을 갈아입는 공간.
+            </p>
+            <a href="tel:010-6279-0862" class="cta-phone">☎ 010-6279-0862</a>
+            <div style="margin-top:48px; font-size:1.2rem; opacity:0.7;">#마포_셔츠룸 #힙플레이스 #언더그라운드</div>
+        </section>
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>힙플레이스 카페: 라이프스타일: 공간 미학과 정리 정돈</h3>
-          <p>가구 배치와 조명 연출 하나만으로 평범한 방을 아늑한 아지트로 변모시키는 공간 정리 팁은 내 멘탈 에너지를 가득 채워주는 보이지 않는 강력한 힘을 발휘하는 일상 속 예술입니다....</p>
-        </a>
-      
-
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>힙플레이스 카페: 라이프스타일: 디지털 디톡스와 아날로그 쉼표</h3>
-          <p>끊임없이 쏟아지는 푸시 알림과 스마트폰의 피로로부터 온전히 격리된 채, 하루에 단 30분씩이라도 책을 읽거나 명상을 즐기는 아날로그 디톡스 루틴은 정신 건강을 지키는 든든한 방패입...</p>
-        </a>
-      
-
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>라이프스타일 에디터가 강력 추천하는 마포 셔츠룸 알짜 가이드</h3>
-          <p>복잡하고 정신없이 굴러가는 하루 일상 속에서 나만의 아날로그 감성과 행복한 쉼표를 기획하는 세련된 에디터분들이라면, 삶의 질을 높여주는 오프라인 휴식 공간의 정보와 최적의 혜택을 ...</p>
-        </a>
-      
-
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>라이프스타일 에디터가 강력 추천하는 마포 셔츠룸 알짜 가이드</h3>
-          <p>복잡하고 정신없이 굴러가는 하루 일상 속에서 나만의 아날로그 감성과 행복한 쉼표를 기획하는 세련된 에디터분들이라면, 삶의 질을 높여주는 오프라인 휴식 공간의 정보와 최적의 혜택을 ...</p>
-        </a>
-      
-        </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 T3.SWISS. ALL RIGHTS RESERVED.</div>
-      <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
-      </div>
-    </footer>
-  </div>
+        <!-- INTRO / ABOUT -->
+        <section class="intro-block container section-gap">
+            <div class="left">
+                <h2 style="border-bottom:4px solid #ff3b00;">뭐하는 곳?</h2>
+                <p style="font-size:1.6rem; margin-top:24px;">
+                    <span class="text-accent">마포 셔츠룸</span>은 간판만 셔츠룸이다.<br>
+                    실제로는 가장 솔직한 커피와 음악, 사람들이 모이는 <strong>힙플레이스 카페</strong>.
+                </p>
+            </div>
+            <div class="right">
+                <p>
+                    셔츠를 갈아입는 척? 노. 우리는 분위
 </body>
 </html>

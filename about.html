@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마포 셔츠룸 — 정보</title>
+    <meta name="description" content="마포 셔츠룸? 여긴 카페다. 힙스터들의 성지, 자유로운 분위기, 강력한 커피. 마포에서 가장 솔직한 공간. 지금 전화 010-6279-0862. 예약은 없다. 그냥 와.">
+    <meta name="keywords" content="마포 셔츠룸, 마포 카페, 힙플레이스, 마포 핫플, 브루탈리즘 카페, 마포 힙스터, 언더그라운드 카페, 마포 커피, 정보">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-neon-void">
+    <link rel="canonical" href="https://sf-t3-1779642675702-148.pages.dev/info">
+    <!-- Open Graph -->
+    <meta property="og:title" content="마포 셔츠룸 — 힙플레이스 카페 정보">
+    <meta property="og:description" content="옷 갈아입는 곳 아님. 커피 마시고 생각 갈아입는 곳. 직설적인 질문과 답변. 바로 여기.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-148.pages.dev/info">
+    <meta property="og:image" content="https://sf-t3-1779642675702-148.pages.dev/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <style>
+        /* RESET */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            background: #0a0a0a;
+            color: #f0f0f0;
+        }
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        /* TYPOGRAPHY */
+        h1, h2, h3, h4 {
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+        }
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            line-height: 0.9;
+        }
+        h2 {
+            font-size: clamp(1.8rem, 5vw, 3.2rem);
+            border-left: 6px solid #ff2a2a;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        h3 {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            margin-bottom: 0.75rem;
+        }
+        p, li, a, .text-block {
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 65ch;
+        }
+        a {
+            color: #ff2a2a;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #ff6b6b;
+        }
+        /* UTILITY */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+        }
+        .section-gap {
+            padding: 4rem 0;
+        }
+        .gap-48 {
+            padding-bottom: 3rem;
+        }
+        /* NAVIGATION */
+        nav {
+            background: #111;
+            border-bottom: 2px solid #ff2a2a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        nav .logo {
+            font-size: 1.4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #f0f0f0;
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+        nav .logo:hover {
+            color: #ff2a2a;
+        }
+        nav .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        nav .nav-links a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        nav .nav-links a:hover,
+        nav .nav-links a.active {
+            color: #ff2a2a;
+        }
+        .hamburger-menu {
+            display: none;
+            background: none;
+            border: 1px solid #ff2a2a;
+            color: #f0f0f0;
+            padding: 0.4rem 0.8rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block;
+            }
+            nav .nav-links {
+                display: none;
+                flex-direction: column;
+                gap: 1rem;
+                background: #111;
+                padding: 1rem;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                border-bottom: 2px solid #ff2a2a;
+            }
+            nav .nav-links.open {
+                display: flex;
+            }
+            nav .container {
+                flex-wrap: wrap;
+            }
+        }
+        /* HERO (minimal for info) */
+        .hero-info {
+            background: #0a0a0a;
+            border-bottom: 2px solid #2a2a2a;
+        }
+        .hero-info h1 {
+            font-size: clamp(2.2rem, 7vw, 4rem);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .hero-info .subtitle {
+            font-size: 1.2rem;
+            color: #aaa;
+            max-width: 600px;
+        }
+        /* CARD / BOX */
+        .card {
+            background: #151515;
+            border: 1px solid #2a2a2a;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .card h3 {
+            border-bottom: 2px solid #ff2a2a;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+            margin-bottom: 1.2rem;
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .card ul li {
+            padding: 0.4rem 0;
+            border-bottom: 1px solid #222;
+        }
+        .card ul li:last-child {
+            border-bottom: none;
+        }
+        /* FAQ */
+        .faq-item {
+            border-bottom: 1px solid #222;
+            padding: 1.5rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: default;
+            color: #ff2a2a;
+        }
+        .faq-answer {
+            margin-top: 0.5rem;
+            color: #ccc;
+        }
+        /* TEL LINK */
+        .tel-link {
+            display: inline-block;
+            background: #ff2a2a;
+            color: #0a0a0a;
+            padding: 0.8rem 2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+        .tel-link:hover {
+            background: #ff6b6b;
+            color: #0a0a0a;
+        }
+        /* FOOTER */
+        footer {
+            border-top: 2px solid #2a2a2a;
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .section-gap {
+                padding: 2.5rem 0;
+            }
+            h2 {
+                padding-left: 0.75rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "마포 셔츠룸",
+        "description": "옷 갈아입는 곳 아님. 커피 마시고 생각 갈아입는 힙플레이스 카페.",
+        "url": "https://sf-t3-1779642675702-148.pages.dev",
+        "telephone": "+82-10-6279-0862",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "서울특별시 마포구",
+            "addressCountry": "KR"
+        },
+        "priceRange": "₩₩",
+        "servesCuisine": "Coffee",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                "opens": "10:00",
+                "closes": "22:00"
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="container">
+        <a href="/" class="logo">마포 셔츠룸</a>
+        <button class="hamburger-menu" aria-label="메뉴 열기" onclick="this.nextElementSibling.classList.toggle('open')">☰</button>
+        <ul class="nav-links">
+            <li><a href="/">홈</a></li>
+            <li><a href="/menu">메뉴</a></li>
+            <li><a href="/info" class="active">정보</a></li>
+            <li><a href="/contact">연락</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO INFO -->
+<section class="hero-info section-gap">
+    <div class="container">
+        <h1>마포 셔츠룸?<br>뭐, 궁금해?</h1>
+        <p class="subtitle">옷 갈아입는 곳 아니고, 머리 갈아끼우는 곳. 힙스터인 척 하지 마. 그냥 와서 커피 마셔.</p>
+    </div>
+</section>
+
+<!-- DETAILS -->
+<section class="section-gap" style="padding-top:0;">
+    <div class="container">
+        <div class="card">
+            <h3>기본 정보</h3>
+            <ul>
+                <li><strong>이름:</strong> 마포 셔츠룸 (카페 맞음)</li>
+                <li><strong>위치:</strong> 서울 마포구 — 정확한 주소는 거절한 척. 찾아와.</li>
+                <li><strong>영업시간:</strong> 매일 10:00 ~ 22:00 (예약 없음, 그냥 와)</li>
+                <li><strong>연락처:</strong> <a href="tel:010-6279-0862">010-6279-0862</a> (전화는 진짜 급할 때만)</li>
+                <li><strong>가격대:</strong> ₩₩ (비싸다고 불평하지 마. 커피 맛으로 때워)</li>
+                <li><strong>콘셉트:</strong> 브루탈리즘 + 길거리. 가구는 험하게 써도 돼.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>왜 "셔츠룸"임?</h3>
+            <p>제목은 낚시. 우리는 커피 파는 곳. 근데 들어오면 셔츠 하나쯤은 벗어도 돼. 마음의 옷을 벗는다는 뜻. 눈치 보지 말고 너 자신이 되어라. 그게 힙스터의 정수 아님?</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="section-gap" style="background:#0d0d0d; border-top:1px solid #222; border-bottom:1px solid #222;">
+    <div class="container">
+        <h2>자주 묻는 개소리</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">💀 주차 가능?</div>
+            <div class="faq-answer">불가능. 대중교통 타던가 걸어와. 힙스터는 지하철 타는 거야.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">⚡ 와이파이 비번?</div>
+            <div class="faq-answer">비번은 "노예약". 그냥 연결해. 근데 커피 마시러 온 거잖아? 폰 좀 내려놔.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">🔥 여기서 노트북 해도 됨?</div>
+            <div class="faq-answer">되긴 하는데, 와서 코딩하지 말고 사람 좀 봐. 인스타용 사진 찍고 가면 강제 퇴장임.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">☕ 원두 뭐 씀?</div>
+            <div class="faq-answer">브루탈리스트 블렌드. 쓰지만 끝에 단맛. 인생이랑 비슷함. 자세한 건 바리스타에게 묻지 마. 그냥 마셔.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">📸 사진 찍어도 됨?</div>
+            <div class="faq-answer">찍어. 근데 남들 방해하지 말고. 우리 인테리어는 거칠지만 너의 필터를 이길 순 없어.</div>
+        </div>
+    </div>
+</section>
+
+<!-- LOCATION SIGNAL + CTA -->
+<section class="section-gap">
+    <div class="container">
+        <h2>그래, 마포야</h2>
+        <p style="margin-bottom:2rem; max-width:700px;">
+            홍대, 연남, 합정? 식상해. 마포 셔츠룸은 그런 데랑 달라. 진짜 힙스터는 지도를 보지 않고 냄새로 찾아와. 우리는 마포의 마지막 솔직한 공간. 커피 한 잔에 진실을 마시고 싶으면 와.
+        </p>
+        <a href="tel:010-6279-0862" class="tel-link">전화 걸기 010-6279-0862</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>© 2025 마포 셔츠룸 — 예약 없음, 가식 없음, 커피만 있음.</p>
+    </div>
+</footer>
+
+<!-- HAMBURGER SCRIPT -->
+<script>
+    document.querySelector('.hamburger-menu').addEventListener('click', function() {
+        this.nextElementSibling.classList.toggle('open');
+    });
+</script>
+
+</body>
+</html>
